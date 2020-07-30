@@ -57,15 +57,13 @@ app.delete("/drinks/:drinks", (req, resp) => {
 });
 
 //find drink by the ingredient
-app.get('/drinks/ingredient/:ingredients', (req, resp) => {
-    Drinks.find({ strIngredient1: req.params.ingredients }).then((drinks) =>{
-        resp.json(drinks);
-    });
+app.get("/drinks/ingredient/:ingredients", (req, resp) => {
+  Drinks.find({ strIngredient1: req.params.ingredients }).then((drinks) => {
+    resp.json(drinks);
+  });
 });
 
-
-
-app.set("port", process.env.PORT || 3000)
+app.set("port", process.env.PORT || 3000);
 
 app.listen(app.get("port"), () => {
   console.log(`✅ PORT: ${app.get("port")} 🌟`);
