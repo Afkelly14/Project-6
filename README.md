@@ -18,17 +18,17 @@ This cocktail API will allow you to search by specific ingredients and show cock
 ## API Routes
 
 USE CRUD
-Create: 
-Read:
-Update:
-Delete:
+Create: create a new drink
+Read: find an existing drink
+Update: update the name of a drink
+Delete: deleting an unwanted drink
 
 Define routes here:
 
 home: ('/')
 drinks: ('/drinks') will show all drinks in the database
 glass: ('/glass') will show a certain type of glass that is searched
-ingredient: ('/ingredient') will show an ingredient 
+ingredient: ('/ingredient') will show an ingredient
 id: ('/drinks/:id') will find a drink based on its id
 
 ## Installations
@@ -41,6 +41,6 @@ id: ('/drinks/:id') will find a drink based on its id
 
 ## Issues
 
-- I had an issue trying to use Axios and decided to swtich to Fetch
-- Issue with the drinkSchema having another array inside
-
+- I had an issue trying to use Axios and decided to switch to Fetch
+- I had an issue with seeding the data using the .map function. The data
+  was in an array and needed to add 'data[0].item.map' in order for the seeding to work correctly.

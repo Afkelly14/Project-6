@@ -33,6 +33,22 @@ app.get("/drinks/glass/:glass", (req, resp) => {
   });
 });
 
+//find a drink by name
+app.get("/drinks/name/:name", (req, resp) => {
+  Drinks.findOne({ strDrink: req.params.name }).then((drinks) => {
+    resp.json(drinks);
+  });
+});
+
+//update the name of a drink
+app.put("/drinks/name/:name", (req, resp) => {
+  Drinks.findOneAndUpdate({ strDrink: req.params.name }, req.body, {
+    new: true,
+  }).then((drinks) => {
+    resp.json(drinks);
+  });
+});
+
 //request for a user to delete a drink
 app.delete("/drinks/:drinks", (req, resp) => {
   Drinks.findOneAndDelete({ strDrink: req.params.drinks }).then((drinks) => {
@@ -40,8 +56,12 @@ app.delete("/drinks/:drinks", (req, resp) => {
   });
 });
 
-//create a show (detail) action to get the details of a PARTICULAR list
-//find drinks by their ingredient
+//find drink by the ingredient
+app.get('/drinks/ingredient/:ingredients', (req, resp) => {
+    Drinks.find({ strIngredient1: req.params.ingredients }).then((drinks) =>{
+        resp.json(drinks);
+    });
+});
 
 app.listen(3000, () => {
   console.log("this is working....");
