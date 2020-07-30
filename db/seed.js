@@ -10,7 +10,12 @@ const drinkInfo = data[0].drinks.map((item) => {
   drinks.strGlass = item.strGlass;
   drinks.strInstructions = item.strInstructions;
   drinks.strDrinkThumb = item.strDrinkThumb;
-  drinks.Ingredients = item.Ingredients;
+  drinks.strIngredient1= item.strIngredient1;
+  drinks.strIngredient2 = item.strIngredient2;
+  drinks.strIngredient3 = item.strIngredient3;
+  drinks.strIngredient4= item.strIngredient4,
+  drinks.strIngredient5= item.strIngredient5
+  
   return drinks;
 });
 

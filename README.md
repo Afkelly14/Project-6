@@ -17,7 +17,17 @@ This cocktail API will allow you to search by specific ingredients and show cock
 
 ## API Routes
 
+USE CRUD
+C: GET method 
+R: READ method
+U: PUT method 
+D: DELETE method
+
 Define routes here:
+
+home: ('/')
+drinks: ('/drinks') will show all drinks in the database
+glass: ('/glass') will show a certain type of glass that is searched
 
 ## Installations
 
@@ -31,4 +41,4 @@ Define routes here:
 
 - I had an issue trying to use Axios and decided to swtich to Fetch
 - Issue with the drinkSchema having another array inside
--
+

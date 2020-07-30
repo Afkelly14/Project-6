@@ -11,6 +11,9 @@ app.get('/drinks', (req, resp) => {
     });
 });
 
+//show the type of glasses
+app.get('/')
+
 
 //create a show (detail) action to get the details of a PARTICULAR list
 //find drinks by their ingredient
