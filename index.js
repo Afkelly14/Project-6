@@ -19,16 +19,16 @@ app.get("/drinks/:id", (req, resp) => {
   });
 });
 
-//request so the user could POST a new drink
-app.post("/drink", (req, resp) => {
+//request so the user could POST(create) a new drink
+app.post("/drinks", (req, resp) => {
   Drinks.create(req.body).then((drink) => {
     resp.json(drink);
   });
 });
 
 //show the type of glasses
-app.get("/drinks/glass", (req, resp) => {
-  Drinks.find({}).then((drinks) => {
+app.get("/drinks/glass/:glass", (req, resp) => {
+  Drinks.find({ strGlass: req.params.glass }).then((drinks) => {
     resp.json(drinks);
   });
 });
