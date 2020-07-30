@@ -18,25 +18,26 @@ This cocktail API will allow you to search by specific ingredients and show cock
 ## API Routes
 
 USE CRUD
-Create: create a new drink
-Read: find an existing drink
-Update: update the name of a drink
-Delete: deleting an unwanted drink
+
+- Create: create a new drink
+- Read: find an existing drink
+- Update: update the name of a drink
+- Delete: deleting an unwanted drink
+
+- Check all CRUD methods using Postman (www.postman.com OR download at https://www.postman.com/downloads/)
 
 Define routes here:
 
-home: ('/')
-drinks: ('/drinks') will show all drinks in the database
-glass: ('/glass') will show a certain type of glass that is searched
-ingredient: ('/ingredient') will show an ingredient
-id: ('/drinks/:id') will find a drink based on its id
+- drinks: ('/drinks') will show all drinks in the database
+- id: ('/drinks/:id') will find a drink based on its id
+- glass: ('/drinks/glass/:glass') will show a certain type of glass that is searched
+- ingredient: ('/drinks/ingredient/:ingredient') will show an ingredient
 
 ## Installations
 
 - Express
 - Mongoose
 - Body-parser
-- Axios
 - Node
 
 ## Issues
