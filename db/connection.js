@@ -2,7 +2,7 @@ const axios = require('axios').default;
 const mongoose = require('mongoose');
 
 mongoose.connect(
-    "mongodb://localhost/houses",
+    "mongodb://localhost/drinks",
     { useNewUrlParser: true }
 )
 
