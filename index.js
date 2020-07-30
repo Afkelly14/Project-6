@@ -33,6 +33,13 @@ app.get("/drinks/glass/:glass", (req, resp) => {
   });
 });
 
+//request for a user to delete a drink
+app.delete("/drinks/:drinks", (req, resp) => {
+  Drinks.findOneAndDelete({ strDrink: req.params.drinks }).then((drinks) => {
+    resp.json(drinks);
+  });
+});
+
 //create a show (detail) action to get the details of a PARTICULAR list
 //find drinks by their ingredient
 

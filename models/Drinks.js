@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 const drinkSchema = new Schema({
   idDrink: String,
+  strDrink: String,
   strCategory: String,
   strAchoholic: String,
   strGlass: String,

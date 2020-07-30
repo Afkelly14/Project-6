@@ -18,13 +18,10 @@ This cocktail API will allow you to search by specific ingredients and show cock
 ## API Routes
 
 USE CRUD
-C: GET method 
-    * find by ID
-    * find the type of glass
-R: READ method
-U: PUT method 
-    * post a new drink
-D: DELETE method
+Create: 
+Read:
+Update:
+Delete:
 
 Define routes here:
 
@@ -32,6 +29,7 @@ home: ('/')
 drinks: ('/drinks') will show all drinks in the database
 glass: ('/glass') will show a certain type of glass that is searched
 ingredient: ('/ingredient') will show an ingredient 
+id: ('/drinks/:id') will find a drink based on its id
 
 ## Installations
 
