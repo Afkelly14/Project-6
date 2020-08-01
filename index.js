@@ -8,7 +8,7 @@ app.use(cors());
 
 //re-route to homepage
 app.get('/', (req, resp) => {
-  res.redirect('/home');
+  res.redirect('/drinks');
 });
 
 
