@@ -5,6 +5,13 @@ const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 app.use(cors());
 
+
+//re-route to homepage
+app.get('/', (req, resp) => {
+  res.redirect('/home');
+});
+
+
 //show all the drinks
 app.get("/drinks", (req, resp) => {
   Drinks.find({}).then((drink) => {
