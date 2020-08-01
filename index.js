@@ -1,9 +1,9 @@
 const app = require("express")();
-app.use(cors());
 const Drinks = require("./models/Drinks");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 app.use(bodyParser.json());
+app.use(cors());
 
 //show all the drinks
 app.get("/drinks", (req, resp) => {
