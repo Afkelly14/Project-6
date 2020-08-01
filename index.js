@@ -1,9 +1,9 @@
 const app = require("express")();
+app.use(cors());
 const Drinks = require("./models/Drinks");
+const cors = require("cors");
 const bodyParser = require("body-parser");
 app.use(bodyParser.json());
-
-//**need to check all of the below and add more CRUD */
 
 //show all the drinks
 app.get("/drinks", (req, resp) => {
@@ -68,7 +68,3 @@ app.set("port", process.env.PORT || 3000);
 app.listen(app.get("port"), () => {
   console.log(`✅ PORT: ${app.get("port")} 🌟`);
 });
-
-// app.listen(3000, () => {
-//   console.log("this is working....");
-// }); //app
