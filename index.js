@@ -48,7 +48,7 @@ app.get("/drinks/name/:name", (req, resp) => {
 });
 
 //update the name of a drink
-app.put("/drinks/name/:name", (req, resp) => {
+app.put("/drinks/name/edit/:name", (req, resp) => {
   Drinks.findOneAndUpdate({ strDrink: req.params.name }, req.body, {
     new: true,
   }).then((drinks) => {
