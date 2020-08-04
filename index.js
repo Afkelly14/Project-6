@@ -5,12 +5,10 @@ const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 app.use(cors());
 
-
 //re-route to homepage
-app.get('/', (req, resp) => {
-  resp.redirect('/drinks');
+app.get("/", (req, resp) => {
+  resp.redirect("/drinks");
 });
-
 
 //show all the drinks
 app.get("/drinks", (req, resp) => {
@@ -33,21 +31,21 @@ app.post("/drinks", (req, resp) => {
   });
 });
 
-//show the type of glasses
+//show the type of glasses 
 app.get("/drinks/glass/:glass", (req, resp) => {
   Drinks.find({ strGlass: req.params.glass }).then((drinks) => {
     resp.json(drinks);
   });
 });
 
-//find a drink by name
+//find a drink by name 
 app.get("/drinks/name/:name", (req, resp) => {
   Drinks.findOne({ strDrink: req.params.name }).then((drinks) => {
     resp.json(drinks);
   });
 });
 
-//update the name of a drink
+//update the name of a drink 
 app.put("/drinks/name/edit/:name", (req, resp) => {
   Drinks.findOneAndUpdate({ strDrink: req.params.name }, req.body, {
     new: true,

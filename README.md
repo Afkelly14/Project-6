@@ -31,7 +31,10 @@ Define routes here:
 - drinks: ('/drinks') will show all drinks in the database
 - id: ('/drinks/:id') will find a drink based on its id
 - glass: ('/drinks/glass/:glass') will show a certain type of glass that is searched
+- name: ('/drinks/name/:name') will show a certain drink by its name
+- edit: ('drinks/name/edit/:name') will allow a user to edit the name of a drink
 - ingredient: ('/drinks/ingredient/:ingredient') will show an ingredient
+- delete: ('drinks/:drinks') delete a drink in the database
 
 ## Installations
 
