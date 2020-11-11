@@ -31,21 +31,21 @@ app.post("/drinks", (req, resp) => {
   });
 });
 
-//show the type of glasses 
+//show the type of glasses
 app.get("/drinks/glass/:glass", (req, resp) => {
   Drinks.find({ strGlass: req.params.glass }).then((drinks) => {
     resp.json(drinks);
   });
 });
 
-//find a drink by name 
+//find a drink by name
 app.get("/drinks/name/:name", (req, resp) => {
   Drinks.findOne({ strDrink: req.params.name }).then((drinks) => {
     resp.json(drinks);
   });
 });
 
-//update the name of a drink 
+//update the name of a drink
 app.put("/drinks/name/edit/:name", (req, resp) => {
   Drinks.findOneAndUpdate({ strDrink: req.params.name }, req.body, {
     new: true,
@@ -56,6 +56,12 @@ app.put("/drinks/name/edit/:name", (req, resp) => {
 
 //request for a user to delete a drink
 app.delete("/drinks/:drinks", (req, resp) => {
+  Drinks.findOneAndDelete({ strDrink: req.params.drinks }).then((drinks) => {
+    resp.json(drinks);
+  });
+});
+
+app.delete("/drinks/:id", (req, resp) => {
   Drinks.findOneAndDelete({ strDrink: req.params.drinks }).then((drinks) => {
     resp.json(drinks);
   });
