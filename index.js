@@ -63,6 +63,7 @@ app.put("/drinks/name/edit/:name", (req, resp) => {
 
 app.delete("/drinks/:id", (req, resp) => {
   Drinks.findOneAndDelete({ idDrink: req.params.id }).then((drinks) => {
+    console.log(req.params.id);
     resp.json(drinks);
   });
 });
