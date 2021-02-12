@@ -55,11 +55,11 @@ app.put("/drinks/name/edit/:name", (req, resp) => {
 });
 
 //request for a user to delete a drink
-app.delete("/drinks/:drinks", (req, resp) => {
-  Drinks.findOneAndDelete({ strDrink: req.params.drinks }).then((drinks) => {
-    resp.json(drinks);
-  });
-});
+// app.delete("/drinks/:drinks", (req, resp) => {
+//   Drinks.findOneAndDelete({ strDrink: req.params.drinks }).then((drinks) => {
+//     resp.json(drinks);
+//   });
+// });
 
 app.delete("/drinks/:id", (req, resp) => {
   Drinks.findOneAndDelete({ idDrink: req.params.id }).then((drinks) => {
